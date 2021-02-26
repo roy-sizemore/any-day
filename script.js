@@ -10,7 +10,7 @@ for (i = 0; i < hoursArr.length; i++) {
     const rowDiv = $('<div>').addClass('row time-block');
     const textArea = $('<textarea>').attr('id', 'text' + i).addClass('col-10');
     const hrDiv = $('<div>').addClass('hour col-1 pt-3').text(hoursArr[i]);
-    const saveDiv = $('<div>').attr('id', i).addClass('saveBtn col-1 img-fluid d-flex justify-content-center align-items-center').append('<img src="./img/save.png">');
+    const saveDiv = $('<div>').attr('id', i).addClass('saveBtn col-1 img-fluid d-flex justify-content-center align-items-center').append('<img src="./img/save.png" alt="save">');
     rowDiv.append(hrDiv, textArea, saveDiv);
     $('.container').append(rowDiv);
 

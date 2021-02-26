@@ -2,9 +2,10 @@
 let currentDate = moment().format('dddd, MMMM Do');
 $('#currentDay').append(currentDate);
 
-// Create a div, add row and hour classes, add hours to each row and append to .container
+// Declare business hours array
 const hoursArr = ['9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'];
 
+// Create divs for the row container, hourly divs, text areas and save buttons
 for (i = 0; i < hoursArr.length; i++) {    
     const rowDiv = $('<div>').addClass('row time-block');
     const textArea = $('<textarea>').attr('id', 'text' + i).addClass('col-10');
@@ -13,9 +14,11 @@ for (i = 0; i < hoursArr.length; i++) {
     rowDiv.append(hrDiv, textArea, saveDiv);
     $('.container').append(rowDiv);
 
+    // Get events from localStorage (if any)
     let persist = localStorage.getItem(i);
     textArea.val(persist);
 
+    //  Check current hour against hoursArr and add styling for present vs future vs past
     let currentHour = moment(moment(), 'h A');
     let hourCompare = moment(hoursArr[i], 'h A');
     
@@ -26,10 +29,9 @@ for (i = 0; i < hoursArr.length; i++) {
     } else {
         textArea.addClass('past');
     };
-
-
 };
 
+// Add save button click functionality to save tasks to localStorage
 $('.saveBtn').click(function () {
     let btnId = $(this).attr('id');
     let task = $('#text' + btnId).val();

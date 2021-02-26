@@ -14,7 +14,8 @@ textarea{
 }
 
 img{
-  width: 20px;
+  width: 55%;
+  height: auto;
 }
 
 .jumbotron {
@@ -69,7 +70,8 @@ img{
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }

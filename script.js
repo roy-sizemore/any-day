@@ -6,13 +6,14 @@ $('#currentDay').append(currentDate);
 const hoursArr = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'];
 
 for (i = 0; i < hoursArr.length; i++) {
-    // Use flex bootstrap to fix these divs!
-    let textArea = $('<textarea>').addClass('description');
-    let hrDiv = $('<div>').addClass('hour col-1').text(hoursArr[i]);
-    let textDiv = $('<div>').addClass('row col-10');
-    let saveDiv = $('<div>').addClass('saveBtn col-1').append('<img src="./img/save.png">');
+    const rowDiv = $('<div>').addClass('row time-block');
+    const textArea = $('<textarea>').addClass('description');
+    const hrDiv = $('<div>').addClass('hour col-1').text(hoursArr[i]);
+    const textDiv = $('<div>').addClass('row col-10');
+    const saveDiv = $('<div>').addClass('saveBtn col-1').append('<img src="./img/save.png">');
     textDiv.append(textArea);
-    $('.container').addClass('container').append(hrDiv, textDiv, saveDiv);
+    rowDiv.append(hrDiv, textDiv, saveDiv);
+    $('.container').append(rowDiv);
 
     // let currentHour = moment().format('HH A');
     

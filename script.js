@@ -32,7 +32,7 @@ for (i = 0; i < hoursArr.length; i++) {
 };
 
 // Add save button click functionality to save tasks to localStorage
-$('.saveBtn').click(function () {
+$('.saveBtn').click(() => {
     let btnId = $(this).attr('id');
     let task = $('#text' + btnId).val();
     localStorage.setItem(btnId, task);

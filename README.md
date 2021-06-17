@@ -18,13 +18,9 @@
   
   ## **Installation**
   
-  To install **Project AnyDay**, run the following command(s):
-  
-  N/A
+  Visit https://roy-sizemore.github.io/any-day/
   
   ## **Licensing** (if available)
-  
-  Visit https://roy-sizemore.github.io/any-day/
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
